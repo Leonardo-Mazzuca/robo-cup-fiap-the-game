@@ -1,0 +1,41 @@
+$component-name: 's__btn';
+
+.#{$component-name}{
+    position: absolute;
+    top: 50%;
+    border: none;
+    padding: 1rem;
+    color: $black;
+    font-size: $fs-ultra;
+    font-weight: 600;
+    animation: is-floating ease-in-out 1s infinite alternate;
+    background-image: url(../../assets/start-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    transition: $transition-fast;
+    width: 320px;
+    height: 85px;
+    font-family: $robot-font;
+
+    &.game-started{
+        opacity: 0;
+        display: none;
+        transition: $transition-fast;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        transition: $transition-fast;
+    }
+
+}
+
+@keyframes is-floating {
+
+    to{
+        transform: translateY(10px);
+   
+    }
+}
+

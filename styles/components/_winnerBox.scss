@@ -1,0 +1,59 @@
+$component-name: 'winner__box';
+
+.#{$component-name} {
+    position: absolute;
+    top: 170px;
+    border: none;
+    background: lighten($white,10);
+    padding: 1rem;
+    border-radius: 4px;
+    color: $white;
+    font-size: $fs-high;
+    font-weight: 700;
+    box-shadow: 2px 2px 8px rgba(0,0,0, .5);
+    transition: $transition-fast;
+    width: 450px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 1%;
+    animation: is-shining 2s infinite alternate, 
+    is-advancing 2s infinite alternate;
+    font-family: $robot-font;
+    opacity: 0;
+    text-transform: uppercase;
+
+    figure .img__winner{
+        width: 90px;
+    }
+
+    &.is-visible{
+        opacity: 1;
+        display: flex;
+        transition: $transition-fast;
+      
+    }
+
+    .winner__name{
+        color: $darkness;
+        margin-left: 1rem;
+    }
+
+}
+
+@keyframes is-shining {
+    
+    from {
+        box-shadow: 2px 2px 8px #df070780;
+    }
+    to {
+        box-shadow: 0 0 20px #df070780; 
+    }
+
+}
+
+@keyframes is-advancing {
+    to{
+        transform: scale(1.1);
+    }
+}

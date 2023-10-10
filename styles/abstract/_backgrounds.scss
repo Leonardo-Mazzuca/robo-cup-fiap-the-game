@@ -1,0 +1,21 @@
+
+
+.bg-pastel{background: $pastel;}
+.bg-pastel-dark{background: darken($pastel, 10%)}
+.bg-ultralight{background: $pastel-ultra-light;}
+
+.bg-night{background: $night;}
+.bg-darkness{background: $darkness;}
+.bg-black{background: $black;}
+.bg-fall{background: $fall;}
+.bg-moon{background: lighten($moon, 20);}
+// custom text
+
+.text-fall{color: $fall;}
+.text-moon{color: $moon;}
+.text-astra{color: $astra;}
+.text-money{color: $money;}
+.text-ocean{color: $ocean;}
+.text-sky{color: $sky;}
+.text-candy{color:$candy;}
+.text-pastel{color:$pastel;}

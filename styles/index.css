@@ -1,0 +1,341 @@
+.bg-pastel {
+  background: #EADBC8;
+}
+
+.bg-pastel-dark {
+  background: #dcc3a3;
+}
+
+.bg-ultralight {
+  background: #FFFAF4;
+}
+
+.bg-night {
+  background: #272829;
+}
+
+.bg-darkness {
+  background: #181818;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.bg-fall {
+  background: #ffbf00;
+}
+
+.bg-moon {
+  background: #dcdede;
+}
+
+.text-fall {
+  color: #ffbf00;
+}
+
+.text-moon {
+  color: #A7ADAD;
+}
+
+.text-astra {
+  color: #F5F5F5;
+}
+
+.text-money {
+  color: #1F8A70;
+}
+
+.text-ocean {
+  color: #0081C9;
+}
+
+.text-sky {
+  color: #82AAE3;
+}
+
+.text-candy {
+  color: #FF597B;
+}
+
+.text-pastel {
+  color: #EADBC8;
+}
+
+.arena__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bot__left {
+  width: 120px;
+  transform: translate(0px, 0px);
+  pointer-events: none;
+  transition: 0.1s ease;
+  opacity: 0;
+}
+.bot__left.is-visible {
+  opacity: 1;
+  transition: 0.1s ease;
+}
+.bot__left img {
+  width: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 12vh;
+}
+
+.bot__right {
+  transform: translate(455px, 0px);
+  pointer-events: none;
+  width: 120px;
+  transition: 0.1s ease;
+  opacity: 0;
+}
+.bot__right.is-visible {
+  opacity: 1;
+  transition: 0.1s ease;
+}
+.bot__right img {
+  width: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 12vh;
+}
+
+.arena__template {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../assets/arenaBot-pixel.png);
+  background-size: 698px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.arena__template .arena__template-bots {
+  width: 698px;
+  height: 578px;
+  display: flex;
+  align-items: center;
+}
+
+.pontuation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 698px;
+}
+.pontuation .pontuation__total {
+  border-radius: 4px;
+  width: 290px;
+  height: 55px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0 0rem;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  transition: 0.6s ease-in-out;
+  font-family: "Orbitron", sans-serif;
+  opacity: 0;
+  background-image: url(../../assets/life-viwer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pontuation .pontuation__total:nth-of-type(1) {
+  order: 1;
+}
+.pontuation .pontuation__total:nth-of-type(2) {
+  order: 3;
+}
+.pontuation .pontuation__total.is-visible {
+  transition: 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.s__btn {
+  position: absolute;
+  top: 50%;
+  border: none;
+  padding: 1rem;
+  color: #000;
+  font-size: 34px;
+  font-weight: 600;
+  animation: is-floating ease-in-out 1s infinite alternate;
+  background-image: url(../../assets/start-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  width: 320px;
+  height: 85px;
+  font-family: "Orbitron", sans-serif;
+}
+.s__btn.game-started {
+  opacity: 0;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+.s__btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes is-floating {
+  to {
+    transform: translateY(10px);
+  }
+}
+.r__btn {
+  position: absolute;
+  top: 50%;
+  border: none;
+  padding: 1rem;
+  color: #000;
+  font-size: 34px;
+  font-weight: 700;
+  animation: is-floating ease-in-out 1s infinite alternate;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  width: 320px;
+  height: 85px;
+  display: none;
+  justify-content: center;
+  background-image: url(../../assets/start-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  font-family: "Orbitron", sans-serif;
+}
+.r__btn.game-restarted {
+  opacity: 1;
+  pointer-events: all;
+  display: block;
+  transition: 0.3s ease-in-out;
+  animation: is-floating ease-in-out 1s infinite alternate, from-top ease-in-out 1s;
+}
+.r__btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes is-floating {
+  to {
+    transform: translateY(10px);
+  }
+}
+@keyframes from-top {
+  from {
+    transform: translateY(-1200px);
+  }
+}
+.winner__box {
+  position: absolute;
+  top: 170px;
+  border: none;
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  width: 450px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1%;
+  animation: is-shining 2s infinite alternate, is-advancing 2s infinite alternate;
+  font-family: "Orbitron", sans-serif;
+  opacity: 0;
+  text-transform: uppercase;
+}
+.winner__box figure .img__winner {
+  width: 90px;
+}
+.winner__box.is-visible {
+  opacity: 1;
+  display: flex;
+  transition: 0.3s ease-in-out;
+}
+.winner__box .winner__name {
+  color: #181818;
+  margin-left: 1rem;
+}
+
+@keyframes is-shining {
+  from {
+    box-shadow: 2px 2px 8px rgba(223, 7, 7, 0.5019607843);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(223, 7, 7, 0.5019607843);
+  }
+}
+@keyframes is-advancing {
+  to {
+    transform: scale(1.1);
+  }
+}
+.box__colision-counter {
+  background-image: url(../../assets/collision-counter.png);
+  background-size: contain;
+  padding: 16px 32px;
+  position: relative;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  order: 2;
+}
+.box__colision-counter .animation-wrapper {
+  position: absolute;
+  content: "";
+  top: 8%;
+  left: 0;
+  border: 6px solid #df143c;
+  border-radius: 50%;
+  width: 100%;
+  height: 85%;
+  opacity: 0;
+  animation: is-splashing 0.8s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+.box__colision-counter .exclamation__icon {
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+.box__colision-counter .exclamation__icon .fa-exclamation {
+  position: absolute;
+  left: 80px;
+  top: -10px;
+  color: #ffbf00;
+  font-size: 4rem;
+  animation: is-advancing 0.2s infinite alternate;
+}
+.box__colision-counter .exclamation__icon.is-visible {
+  opacity: 1;
+  transition: 0.6s ease-in-out;
+}
+
+@keyframes is-splashing {
+  to {
+    opacity: 0;
+    transform: scale(1.15, 1.5);
+  }
+}
+main {
+  background-color: #323232;
+  height: 100vh;
+}/*# sourceMappingURL=index.css.map */

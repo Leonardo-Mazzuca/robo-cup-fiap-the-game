@@ -1,0 +1,30 @@
+$component-name: 'bot__right';
+
+.#{$component-name}{
+
+    transform: translate(455px,0px);
+    pointer-events: none;
+    width: 120px;
+    transition: .1s ease;
+    opacity: 0;
+
+    &.is-visible{
+        opacity: 1;
+        transition: .1s ease;
+    }
+
+    img{
+        width: inherit;
+        object-fit: contain;
+        height: 12vh;
+     
+       
+    }
+
+    
+
+
+  
+
+
+}

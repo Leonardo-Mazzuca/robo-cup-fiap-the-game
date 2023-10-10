@@ -1,0 +1,22 @@
+$component-name:'arena__template';
+
+.#{$component-name}{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/arenaBot-pixel.png);
+    background-size:698px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    .arena__template-bots{
+        width: 698px;
+        height: 578px;
+        display: flex;
+        align-items: center;
+    }
+}

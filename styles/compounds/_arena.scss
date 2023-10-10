@@ -1,0 +1,17 @@
+$compound-name: 'arena__container';
+
+.#{$compound-name}{
+
+
+    width: $width-100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem 5%;
+    position: relative;
+    overflow: hidden;
+
+
+}

@@ -1,0 +1,53 @@
+$component-name: 'r__btn';
+
+.#{$component-name}{
+    position: absolute;
+    top: 50%;
+    border: none;
+    padding: 1rem;
+    color: $black;
+    font-size: $fs-ultra;
+    font-weight: 700;
+    animation: is-floating ease-in-out 1s infinite alternate;
+    opacity: 0;
+    transition: $transition-fast;
+    width: 320px;
+    height: 85px;
+    display: none;
+    justify-content: center;
+    background-image: url(../../assets/start-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    font-family: $robot-font;
+
+    &.game-restarted{
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+        transition: $transition-fast;
+        animation: is-floating ease-in-out 1s infinite alternate, from-top ease-in-out 1s;
+    }
+
+
+
+    &:hover{
+        transform: scale(1.1);
+        transition: $transition-fast;
+    }
+
+}
+
+@keyframes is-floating {
+    to{
+        transform: translateY(10px);
+   
+    }
+}
+
+@keyframes from-top {
+    from{
+        transform: translateY(-1200px);
+    }
+}
+

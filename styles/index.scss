@@ -1,0 +1,25 @@
+//======================= abstrac =======================
+@import './abstract/variables';
+@import './abstract/backgrounds';
+@import './abstract/breakpoints';
+
+
+//======================= Compounds =======================
+@import './compounds/arena';
+
+
+//======================= Components =======================
+@import './components/botLeft';
+@import './components/botRight';
+@import './components/arenaTemplate';
+@import './components/pontuation';
+@import './components/startBtn';
+@import './components/restartBtn';
+@import './components/winnerBox';
+@import './components/colisionCounter';
+
+main{
+    background-color: lighten($darkness,10);
+    height: 100vh;
+
+}
