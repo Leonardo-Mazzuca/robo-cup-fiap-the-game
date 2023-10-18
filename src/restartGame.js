@@ -2,7 +2,7 @@ import { botSets } from "./game";
 
 
 export function restartBotLife (botSet) {
-    botSet.life = Math.max(Math.floor(Math.random() * 21), 0);
+    botSet.life =100;
 }
 
 export function restartBotPosition () {
