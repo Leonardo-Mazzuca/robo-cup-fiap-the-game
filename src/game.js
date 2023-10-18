@@ -25,7 +25,7 @@ const getRandomBot = () => {
 
 const [botLeftOBJ,botRightOBJ] = getRandomBot();
 
-const getBotLife = () => {
+export const getBotLife = () => {
     const highBotLifeProbability = 0.6;
 
     if(Math.random() < highBotLifeProbability){
@@ -43,7 +43,7 @@ export const botSets = [
         translateX: 0,
         translateY: 0,
         speed: 15,
-        life: getBotLife(),
+        life: 100,
         positions : {
             maxArenaX: 582,
 
@@ -61,7 +61,7 @@ export const botSets = [
         translateY: 0,
         speed: 15,
 
-        life:  getBotLife(),
+        life:  100,
 
         positions : {
             maxArenaX: 455,
