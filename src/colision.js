@@ -1,3 +1,4 @@
+import { getBotLife } from "./game";
 
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
@@ -97,8 +98,8 @@ export const updateBotLife = (botSet) => {
 
 const loseHpOnCrash = (crash, bot1, bot2) => {
     if (crash) {
-        bot1.life -= 2;
-        bot2.life -= 2;
+        bot1.life -= getBotLife();
+        bot2.life -= getBotLife();
         updateBotLife(bot1);
         updateBotLife(bot2);
     }
